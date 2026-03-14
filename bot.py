@@ -5,6 +5,7 @@ from hashlib import sha256
 import json
 import pandas as pd
 import sys
+import os
 
 # ==========================================
 # 1. CONFIGURACIÓN
@@ -14,8 +15,8 @@ INTERVAL = "1m"
 LEVERAGE = 10
 
 APIURL = "https://open-api-vst.bingx.com"
-APIKEY = "6PEooMAFDaqbx0WdyskWfVlGkSUWzcRmzfipI8IRlDStDz3S3tpJDRwJwFnnbv9nIHB9sZgm4iFXmYepsilA"
-SECRETKEY = "MnOjEnvnLN1GWcS6onEk9jIOh2yPzY4eoV5xp9jfmtbm0WpAcMJD2ruIB0XXZCKfuhmc7ukY0GJUyZw0hzA"
+APIKEY = os.environ["APIKEY"]
+SECRETKEY = os.environ["SECRETKEY"]
 
 EMA_FAST = 13
 EMA_SLOW = 95
